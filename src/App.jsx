@@ -7,22 +7,34 @@ function App() {
   const [squares,setSquares]=useState(Array(9).fill(null));
    const [action,setAction]=useState('X');
    const [win,setWin]=useState(null);
-  //['null','null'...]
+   const [event,setEvent]=useState(0);
 
   const tic = (i)=>{
     const newSquare = squares.slice()
-    if(newSquare[i] !== null){
-      alert('Alrady checked')
-    }else{
+    if(newSquare[i]){
+      return;
+    }
+    if(win !== null){
+       return;
+    }
     setAction(action === 'X' ? 'O' : 'X');
     newSquare[i] = action
     setSquares(newSquare)
-    console.log('tic')
-    }
+    console.log('tic' + event)
+
+  }
+ 
+  const reset = () =>{
+    if(event > 0){
+    setSquares(Array(9).fill(null))
+    setAction('X')
+    setWin(null)
+    setEvent(0)
+  }
   }
 
  const check_win = () => {
-
+  setEvent(event + 1)
   const lines = [
     [0,1,2],
     [3,4,5],
@@ -43,7 +55,11 @@ function App() {
       squares[a] === squares[c]
     ) {
       setWin(squares[a] + " is Winner");
+      setEvent(0);
     }
+  }
+  if(event == 9 && win === null){
+   setWin("No one won. Please try again.");
   }
 };
 
@@ -67,7 +83,7 @@ useEffect(() => {
       <Square onSquareClick={()=>tic(7)} value={squares[7]}/>
       <Square onSquareClick={()=>tic(8)} value={squares[8]}/>
     </div>
-    <button className="reset">Restart</button>
+    <button className="reset" onClick={reset}>Restart</button>
   </div>
     </>
   )
