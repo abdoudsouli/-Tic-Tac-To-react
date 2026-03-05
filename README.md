@@ -1,16 +1,32 @@
-# React + Vite
+# Tic Tac Toe - React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive Tic Tac Toe game built using React.  
+This project demonstrates the use of React hooks and component-based architecture to manage game state and user interactions.
 
-Currently, two official plugins are available:
+## Features
+- Classic Tic Tac Toe gameplay
+- Turn indicator (X / O)
+- Automatic winner detection
+- Restart button to reset the game
+- Responsive and clean UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React
+- JavaScript (ES6)
+- HTML5
+- CSS3
 
-## React Compiler
+## How It Works
+Players take turns clicking on the grid squares to place their mark (X or O).  
+The game automatically checks for a winning combination or a draw after each move.  
+When a player wins, the game displays the winner and allows the board to be restarted.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Learning Purpose
+This project was created to practice:
+- React functional components
+- useState hook
+- Event handling
+- Game logic implementation in JavaScript
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Preview
+Simple UI with a 3×3 grid, turn indicator, winner announcement, and restart button.
