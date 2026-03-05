@@ -1,3 +1,8 @@
+
+<img width="1597" height="854" alt="FireShot Capture 015 - tic tac toe Game - localhost" src="https://github.com/user-attachments/assets/bef240f3-10fb-4572-b53d-fef786a6336e" />
+
+
+
 # Tic Tac Toe - React App
 
 A simple and interactive Tic Tac Toe game built using React.  
@@ -9,6 +14,9 @@ This project demonstrates the use of React hooks and component-based architectur
 - Automatic winner detection
 - Restart button to reset the game
 - Responsive and clean UI
+
+
+<img width="874" height="777" alt="FireShot Capture 016 - tic tac toe Game - localhost" src="https://github.com/user-attachments/assets/e0cf0191-d789-4574-b17a-ee225140bc16" />
 
 ## Technologies Used
 - React
