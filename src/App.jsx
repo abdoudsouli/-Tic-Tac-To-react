@@ -20,17 +20,13 @@ function App() {
     setAction(action === 'X' ? 'O' : 'X');
     newSquare[i] = action
     setSquares(newSquare)
-    console.log('tic' + event)
-
   }
  
   const reset = () =>{
-    if(event > 0){
     setSquares(Array(9).fill(null))
     setAction('X')
     setWin(null)
     setEvent(0)
-  }
   }
 
  const check_win = () => {
@@ -72,6 +68,7 @@ useEffect(() => {
   <div className="container">
     <h2>{win}</h2>
     <h2>Tic Tac Toe</h2>
+    <p>Next turn for {action}</p>
     <div className="board">
       <Square onSquareClick={()=>tic(0)} value={squares[0]} />
       <Square onSquareClick={()=>tic(1)} value={squares[1]}/>
